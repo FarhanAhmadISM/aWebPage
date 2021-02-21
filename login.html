@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
-  <head>
-  	<meta charset="utf-8">
+<head>
+    <!-- basic -->
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!-- mobile metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Electura Login</title>
+    <title>Sign In</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -25,11 +26,24 @@
     <!-- Tweaks for older IEs-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-  	 <link rel="stylesheet" href="css/login.css">
-  </head>
+    <link rel="stylesheet" href="css/login.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+<!-- body -->
 
 <body>
-	<div class="header">
+    <!-- loader  -->
+    <div class="loader_bg">
+        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+    </div>
+
+    <!-- end loader -->
+    <!-- header -->
+    <header>
+        <!-- header inner -->
+        <div class="header">
 
             <div class="container">
                 <div class="row">
@@ -45,10 +59,10 @@
                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
                         <div class="location_icon_bottum_tt">
                             <ul>
-                                <!--<li><img src="icon/loc1.png" />Location</li>-->
+                                <li><img src="icon/loc1.png" />Location</li>
                                 <li><img src="icon/email1.png" />connect@electura.co</li>
                                 <li><img src="icon/call1.png" />+91-9302275951</li>
-                                <li><img src="icon/login.jpg" height="35px" width="35px" />Sign Out</li> 
+                               <!-- <li><img src="icon/login.jpg" height="35px" width="35px" />Sign Out</li>--> 
                             </ul>
                         </div>
                     </div>
@@ -80,8 +94,12 @@
                 </div>
             </div>
         </div>
-<div style="background-image: url('images/banner.jpg')">
-<div class="login-wrap">
+        <!-- end header inner -->
+    </header>
+      
+   <section class="slider_section"> 
+    <div style="background-image: url('images/banner.jpg')">
+    <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
 		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
@@ -136,5 +154,97 @@
 	</div>
 </div>
 </div>
+</section>
+    <!-- end footer -->
+    <!-- Javascript files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript -->
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+
+            $(".zoom").hover(function() {
+
+                $(this).addClass('transition');
+            }, function() {
+
+                $(this).removeClass('transition');
+            });
+        });
+    </script>
+    <script>
+        // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+        // Australia.
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 11,
+                center: {
+                    lat: 40.645037,
+                    lng: -73.880224
+                },
+            });
+
+            var image = 'images/maps-and-flags.png';
+            var beachMarker = new google.maps.Marker({
+                position: {
+                    lat: 40.645037,
+                    lng: -73.880224
+                },
+                map: map,
+                icon: image
+            });
+        }
+    </script>
+    <!-- google map js -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+    <!-- end google map js -->
+    <footr>
+        <div class="header">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col logo_section">
+                        <div class="full">
+                            <div class="center-desk">
+                                <div class="logo">
+                                    <a href="index.html"><img src="images/logo.png" alt="#" width="75px" height="75px"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                        <div class="location_icon_bottum_tt">
+                            <ul>
+                                <li><img src="icon/loc1.png" />Location</li>
+                                <li><img src="icon/email1.png" />connect@electura.co</li>
+                                <li><img src="icon/call1.png" />+91-9302275951</li>
+                                <!--<li><img src="icon/login.jpg" height="35px" width="35px" />Sign Out</li>--> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+               
+        </div>
+     
+        <div class="copyright">
+            <div class="container">
+                <p>Copyright © 2021 Electura | Powered by BrandCobblers Services Pvt. Ltd.</p>
+           
+        </div>
+        </div>
+    </footr>
 </body>
+
 </html>
